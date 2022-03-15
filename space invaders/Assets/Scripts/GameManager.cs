@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI currentScore;
@@ -51,7 +51,9 @@ public class GameManager : MonoBehaviour
         bunker3.bunkerRest();
         bunker4.bunkerRest();
         invaders.InvaderReset();
+        SceneManager.LoadScene(2);
         Respawn();
+        
         
     }
 

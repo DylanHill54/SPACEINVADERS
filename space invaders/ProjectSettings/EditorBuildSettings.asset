@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/spaceinvaders.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/menu.unity
+    guid: fdf653a8e8af34b4d80ff35b8dc5d5cb
+  - enabled: 1
+    path: Assets/Scenes/credits.unity
+    guid: d558a2e08cc28d348ae4a11673db407c
   m_configObjects: {}

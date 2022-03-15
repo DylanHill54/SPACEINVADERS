@@ -12,10 +12,14 @@ public class Player : MonoBehaviour
     public float speed = 5.0f;
     public Action killed;
     private bool laserACtive;
+    private Animator playerAnimator;
+
+    private static readonly int Dead = Animator.StringToHash("dead");
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -59,8 +63,15 @@ public class Player : MonoBehaviour
         {
             if (killed != null)
             {
-                killed.Invoke();
+                playerAnimator.SetTrigger(Dead);
+                //killed.Invoke();
+                Invoke("killPlayer",2.0f);
             }
         }
+    }
+
+    void killPlayer()
+    {
+        killed.Invoke();
     }
 }

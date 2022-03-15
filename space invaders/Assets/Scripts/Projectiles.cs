@@ -8,7 +8,6 @@ public class Projectiles : MonoBehaviour
     public Vector3 direction;
 
     public float speed;
-
     public Action destroyed;
     // Start is called before the first frame update
     void Start()
